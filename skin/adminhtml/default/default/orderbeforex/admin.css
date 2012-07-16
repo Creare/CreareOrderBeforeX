@@ -1,0 +1,12 @@
+/* CSS Document */
+.creare-header { width: 100%; }
+.creare-footer { width: 100%; padding: 10px 0 0; clear: both; }
+.creare-footer a span { display: none; }
+.creare-footer a { display: block; float: left; margin-right: 5px; }
+.creare-container { background-color:#fff;border:1px solid #CCC;padding:10px;margin-bottom:7px; height: 90px; }
+.ecom-creare { background: url(images/creare-ecommerce.gif) no-repeat; width: 150px; height: 55px; }
+.seo-creare { background: url(images/creare-seo.gif) no-repeat; width: 150px; height: 55px; }
+.web-creare { background: url(images/creare-web.gif) no-repeat; width: 150px; height: 55px;}
+.uk-flag { background: url(images/uk-flag.gif) no-repeat; width: 150px; height: 55px; display: block; float: left; }
+.uk-flag span { display: none; }
+.creare-clear { clear: both; }

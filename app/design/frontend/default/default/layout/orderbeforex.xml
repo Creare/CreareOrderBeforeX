@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout version="0.1.0">
+	<default>
+		<reference name="head">
+			<action method="addCss"><stylesheet>css/orderbeforex.css</stylesheet></action>
+		</reference>
+	
+		<reference name="right">
+			<block type="orderbeforex/orderbeforex" name="orderbeforex" template="orderbeforex/orderbeforex.phtml" before="-" />
+		</reference>
+		<!--<reference name="left">
+			<block type="orderbeforex/orderbeforex" name="orderbeforex" template="orderbeforex/orderbeforex.phtml" before="-" />
+		</reference>-->
+	</default>
+</layout>

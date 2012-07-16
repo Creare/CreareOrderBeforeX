@@ -1,0 +1,15 @@
+/* Creare OrderBeforeX */
+#creare_cdc { height: 37px; display: block; clear: both; }
+#creare-hours { padding: 0 10px 0 0; height: 37px; display: block; float: left; background: url('../images/orderbeforex/digits.png') right -2183px no-repeat; }
+#creare-minutes { padding: 0 10px 0 0; height: 37px; display: block; float: left; background: url('../images/orderbeforex/digits.png') right -2183px no-repeat; }
+#creare_cdc span span { background: url('../images/orderbeforex/digits.png') no-repeat 0 0; width: 25px; height: 37px; display: block; float: left; }
+.ccdc-0 { background-position: 0 0!important; }
+.ccdc-1 { background-position: 0 -182px!important; }
+.ccdc-2 { background-position: 0 -436px!important; }
+.ccdc-3 { background-position: 0 -654px!important; }
+.ccdc-4 { background-position: 0 -836px!important; }
+.ccdc-5 { background-position: 0 -1054px!important; }
+.ccdc-6 { background-position: 0 -1308px!important; }
+.ccdc-7 { background-position: 0 -1526px!important; }
+.ccdc-8 { background-position: 0 -1744px!important; }
+.ccdc-9 { background-position: 0 -1961px!important; }

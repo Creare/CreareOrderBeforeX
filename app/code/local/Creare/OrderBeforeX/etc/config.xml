@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * @category   Creare
+ * @package    Creare_OrderBeforeX
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+  <modules>
+    <Creare_OrderBeforeX>
+      <version>0.1.0</version>
+    </Creare_OrderBeforeX>
+  </modules>
+  <frontend>
+    <layout>
+      <updates>
+        <orderbeforex>
+          <file>orderbeforex.xml</file>
+        </orderbeforex>
+      </updates>
+    </layout>
+  </frontend>
+  <adminhtml>
+    <layout>
+      <updates>
+        <orderbeforex>
+          <file>orderbeforex.xml</file>
+        </orderbeforex>
+      </updates>
+    </layout>
+  </adminhtml>
+  <global>
+    <models>
+      <orderbeforex>
+        <class>Creare_OrderBeforeX_Model</class>
+        <resourceModel>orderbeforex_mysql4</resourceModel>
+      </orderbeforex>
+      <orderbeforex_adminhtml>
+        <class>Creare_OrderBeforeX_Model_Adminhtml</class>
+      </orderbeforex_adminhtml>
+      <orderbeforex_mysql4>
+        <class>Creare_OrderBeforeX_Model_Mysql4</class>
+        <entities>
+          <orderbeforex>
+            <table>orderbeforex</table>
+          </orderbeforex>
+        </entities>
+      </orderbeforex_mysql4>
+    </models>
+    <resources>
+      <creare_orderbeforex_setup>
+        <setup>
+          <module>Creare_OrderBeforeX</module>
+        </setup>
+        <connection>
+          <use>core_setup</use>
+        </connection>
+      </creare_orderbeforex_setup>
+    </resources>
+    <blocks>
+      <orderbeforex>
+        <class>Creare_OrderBeforeX_Block</class>
+      </orderbeforex>
+    </blocks>
+    <helpers>
+      <orderbeforex>
+        <class>Creare_OrderBeforeX_Helper</class>
+      </orderbeforex>
+    </helpers>
+  </global>
+  <default>
+    <orderbeforex>
+      <orderbeforex>
+        <active>1</active>
+        <top_message>Order Before 8pm</top_message>
+        <time>20:00</time>
+        <bottom_message>For Next Day Delivery</bottom_message>
+      </orderbeforex>
+    </orderbeforex>
+  </default>
+  <adminhtml>
+    <acl>
+      <resources>
+        <all>
+          <title>Allow Everything</title>
+        </all>
+        <admin>
+          <children>
+            <system>
+              <children>
+                <config>
+                  <children>
+                    <orderbeforex>
+                      <title>CreareGroup - All</title>
+                    </orderbeforex>
+                  </children>
+                </config>
+              </children>
+            </system>
+          </children>
+        </admin>
+      </resources>
+    </acl>
+  </adminhtml>
+</config>

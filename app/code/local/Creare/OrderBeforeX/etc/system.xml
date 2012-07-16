@@ -1,0 +1,80 @@
+<config>
+  <tabs>
+    <creare translate="label" module="orderbeforex">
+      <label>CreareGroup</label>
+      <sort_order>100</sort_order>
+    </creare>
+  </tabs>
+  <sections>
+    <orderbeforex translate="label" module="orderbeforex">
+      <label>Order Before X</label>
+      <tab>creare</tab>
+      <sort_order>1000</sort_order>
+      <show_in_default>1</show_in_default>
+      <show_in_website>1</show_in_website>
+      <show_in_store>1</show_in_store>
+      <groups>
+        <orderbeforex translate="label" module="orderbeforex">
+          <label>Order Before X</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>1000</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <comment>
+            <![CDATA[<div class="creare-container">
+              <div class="creare-header">This module was developed by <a href="http://www.e-commercewebdesign.co.uk" target="_blank">www.e-commercewebdesign.co.uk</a> - <strong>Magento Design, Development &amp; Extensions</strong>.</div>
+              <div class="creare-footer"><a href="http://www.e-commercewebdesign.co.uk" class="ecom-creare" target="_blank" title="E-Commerce Web Design"><span>E-Commerce Web Design</span></a> <a href="http://www.webdesigncreare.co.uk" class="web-creare" target="_blank" title="Web Design &amp; Development"><span>Web Design &amp; Development</span></a> <a href="http://www.seo-creare.co.uk" class="seo-creare" target="_blank" title="SEO &amp; Internet Marketing"><span>SEO (Search Engine Optimisation)</span></a> <span class="uk-flag"><span>Based In The UK</span></span></div>
+              </div>
+			  <div class="creare-clear"></div>]]>
+          </comment>
+          <fields>
+            <active translate="label">
+              <label>Enabled</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </active>
+            <top_message translate="label">
+              <label>Top Message</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>20</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </top_message>
+            <time translate="label">
+              <label>Time</label>
+              <frontend_type>select</frontend_type>
+              <source_model>orderbeforex_adminhtml/system_config_source_times</source_model>
+              <sort_order>30</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </time>
+            <available translate="label">
+              <label>Exclude Days</label>
+              <frontend_type>multiselect</frontend_type>
+              <source_model>orderbeforex_adminhtml/system_config_source_days</source_model>
+              <sort_order>30</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </available>
+            <bottom_message translate="label">
+              <label>Bottom Message</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>40</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </bottom_message>
+          </fields>
+        </orderbeforex>
+      </groups>
+    </orderbeforex>
+  </sections>
+</config>

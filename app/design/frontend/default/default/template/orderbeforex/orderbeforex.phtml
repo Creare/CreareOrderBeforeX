@@ -1,0 +1,82 @@
+<?php
+/*
+* Creare (E-commerce Web Design)
+* OrderBeforeX
+*
+* Display the order before time
+*
+*/
+?>
+
+<?php $time = Mage::getStoreConfig('orderbeforex/orderbeforex/time'); ?>
+<?php if(Mage::getStoreConfig('orderbeforex/orderbeforex/active') && !$this->checkAvailableDays() && date('H:i') < date($time)): ?>
+<script type="text/javascript">
+
+var id_to_hide = "creare_cdc";
+
+ function Countdown(then) {
+ 
+ 	this.then = then;
+ 	
+ 	function setElement(id, value) {
+ 		if (value < 10) {
+ 	    	value = '<span class="digit ccdc-0"><strong class="no-display">0</strong></span>' + '<span class="digit ccdc-'+value+'"><strong class="no-display">'+value+'</strong></span>';
+ 		} else {
+			temp = value.toString();
+			temp2 = temp.substr(0,1);
+			temp3 = temp.substr(1,1);
+			value = '<span class="digit ccdc-'+temp2+'"><strong class="no-display">'+temp2+'</strong></span>' + '<span class="digit ccdc-'+temp3+'"><strong class="no-display">'+temp3+'</strong></span>';
+		} 			
+		window.document.getElementById(id).innerHTML = value;			
+ 	}
+ 	
+ 	function countdown() {
+ 		now  		  = new Date();
+ 	  	diff		  = new Date(this.then - now);
+ 	  	
+ 		seconds_left  = Math.floor(diff.valueOf() / 1000);
+ 	
+ 		seconds  = Math.floor(seconds_left / 1) % 60;
+ 		minutes  = Math.floor(seconds_left / 60) % 60;
+ 		hours    = Math.floor(seconds_left / 3600) % 24;
+ 		days     = Math.floor(seconds_left / 86400) % 86400;
+ 		
+		
+ 		//setElement('creare-days', days);
+ 		setElement('creare-hours', hours);
+ 		setElement('creare-minutes', minutes);
+ 		setElement('creare-seconds', seconds);
+		
+		if(hours <= 0 && minutes <= 0 && seconds <= 0){
+			document.getElementById('creare-container').innerHTML = "";
+		} else {
+ 			countdown.timer = setTimeout(countdown, 1000);
+		}
+		
+		
+ 				
+ 	}
+	
+	function start() {
+ 		this.timer = setTimeout(countdown, 1000);		
+ 	}
+ 	
+ 	start(then);	
+ }
+ 
+ Countdown(new Date("<?php echo date("m/d/Y $time:00"); ?>"));     
+
+</script>
+    <div class="block" id="creare-container">
+      <div class="block-title"> <strong><span>Need it Quick?</span></strong> </div>
+      <div class="block-content" id="creare-container">      
+        <p class="block-subtitle a-center"><?php echo Mage::getStoreConfig('orderbeforex/orderbeforex/top_message'); ?></p>        
+        <p class="block-subtitle a-center" id="creare_cdc">
+            <span id="creare-hours"></span> 
+            <span id="creare-minutes"></span> 
+            <span id="creare-seconds"></span>
+        </p>
+        <p class="block-subtitle a-center"><?php echo Mage::getStoreConfig('orderbeforex/orderbeforex/bottom_message'); ?></p>        
+      </div>
+    </div>
+<?php endif; ?>
